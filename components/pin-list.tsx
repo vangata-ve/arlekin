@@ -74,7 +74,7 @@ export function PinList({ pins, onDeletePin }: PinListProps) {
           <div className="space-y-4 max-h-96 overflow-y-auto custom-scrollbar">
             {pins
               .sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
-              .map((pin, index) => {
+              .map((pin) => {
                 const locationInfo = getLocationInfo(pin.lat, pin.lng)
                 return (
                   <div

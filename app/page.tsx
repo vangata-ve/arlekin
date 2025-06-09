@@ -20,16 +20,20 @@ export default function HomePage() {
 
   // Load pins from localStorage on mount
   useEffect(() => {
-    const savedPins = localStorage.getItem("worldpins")
-    if (savedPins) {
-      setPins(
-        JSON.parse(savedPins).map((pin: any) => ({
-          ...pin,
-          timestamp: new Date(pin.timestamp),
-        })),
-      )
+    if (typeof window !== "undefined") {
+      const savedPins = localStorage.getItem("worldpins");
+      if (savedPins) {
+        type StoredPin = Omit<Pin, "timestamp"> & { timestamp: string };
+        setPins(
+            (JSON.parse(savedPins) as StoredPin[]).map((pin) => ({
+              ...pin,
+              timestamp: new Date(pin.timestamp),
+            }))
+        );
+      }
     }
-  }, [])
+  }, []);
+
 
   const handleAddPin = (lat: number, lng: number, label: string) => {
     const newPin: Pin = {
