@@ -91,8 +91,8 @@ export function WorldMap({ pins, onAddPin }: WorldMapProps) {
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <MapPin className="h-8 w-8 text-white animate-pulse" />
             </div>
-            <p className="text-green-700 text-lg font-medium">Loading your world map...</p>
-            <p className="text-green-600 text-sm mt-1">Preparing the globe for exploration</p>
+            <p className="text-green-700 text-lg font-medium">Зареждане на световната карта...</p>
+            <p className="text-green-600 text-sm mt-1">Подготвяне на картата...</p>
           </div>
         </div>
     );
@@ -143,7 +143,7 @@ export function WorldMap({ pins, onAddPin }: WorldMapProps) {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <span className="bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent font-bold">
-                Add New Pin
+                Добави ново пинче
               </span>
               </DialogTitle>
             </DialogHeader>
@@ -160,11 +160,11 @@ export function WorldMap({ pins, onAddPin }: WorldMapProps) {
               )}
               <div className="space-y-3">
                 <Label htmlFor="pin-label" className="text-green-800 font-medium">
-                  What makes this place special?
+                  Какво прави това място специално
                 </Label>
                 <Input
                     id="pin-label"
-                    placeholder="e.g., Amazing sunset spot, Best coffee in town, Dream destination..."
+                    placeholder="Пр. Изложба, паметник, представление и т.н."
                     value={pinLabel}
                     onChange={(e) => setPinLabel(e.target.value)}
                     onKeyDown={(e) => {
@@ -181,14 +181,14 @@ export function WorldMap({ pins, onAddPin }: WorldMapProps) {
                     className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-xl py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Sparkles className="h-4 w-4 mr-2" />
-                  Add Pin
+                  Добави пинче
                 </Button>
                 <Button
                     variant="outline"
                     onClick={handleCancel}
                     className="flex-1 border-2 border-green-300 hover:border-green-400 text-green-700 hover:bg-green-50 rounded-xl py-3 font-medium transition-all duration-300"
                 >
-                  Cancel
+                  Отмени
                 </Button>
               </div>
             </div>

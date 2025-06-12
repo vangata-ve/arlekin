@@ -31,18 +31,18 @@ export function PinList({ pins, onDeletePin }: PinListProps) {
 
   const getLocationInfo = (lat: number, lng: number) => {
     if (lat > 35 && lat < 70 && lng > -10 && lng < 40)
-      return { name: "Europe", emoji: "🇪🇺", color: "from-green-500 to-emerald-500" }
+      return { name: "Европа", emoji: "🇪🇺", color: "from-green-500 to-emerald-500" }
     if (lat > 25 && lat < 50 && lng > -125 && lng < -65)
-      return { name: "North America", emoji: "🇺🇸", color: "from-emerald-500 to-teal-500" }
+      return { name: "Северна Америка", emoji: "🇺🇸", color: "from-emerald-500 to-teal-500" }
     if (lat > -35 && lat < 35 && lng > -20 && lng < 50)
-      return { name: "Africa", emoji: "🌍", color: "from-teal-500 to-green-500" }
+      return { name: "Африка", emoji: "🌍", color: "from-teal-500 to-green-500" }
     if (lat > -45 && lat < 35 && lng > 60 && lng < 150)
-      return { name: "Asia", emoji: "🌏", color: "from-green-500 to-lime-500" }
+      return { name: "Азия", emoji: "🌏", color: "from-green-500 to-lime-500" }
     if (lat > -50 && lat < -10 && lng > 110 && lng < 180)
-      return { name: "Australia", emoji: "🇦🇺", color: "from-lime-500 to-emerald-500" }
+      return { name: "Австралия", emoji: "🇦🇺", color: "from-lime-500 to-emerald-500" }
     if (lat > -60 && lat < 15 && lng > -85 && lng < -35)
-      return { name: "South America", emoji: "🌎", color: "from-emerald-500 to-green-500" }
-    return { name: "Ocean", emoji: "🌊", color: "from-teal-500 to-cyan-500" }
+      return { name: "Южна Америка", emoji: "🌎", color: "from-emerald-500 to-green-500" }
+    return { name: "Океан", emoji: "🌊", color: "from-teal-500 to-cyan-500" }
   }
 
   return (
@@ -54,8 +54,8 @@ export function PinList({ pins, onDeletePin }: PinListProps) {
               <MapPin className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-green-800">My Pins</h3>
-              <p className="text-xs text-green-600">{pins.length} saved locations</p>
+              <h3 className="text-lg font-semibold text-green-800">Моите пинчета</h3>
+              <p className="text-xs text-green-600">{pins.length} запазени локации</p>
             </div>
           </div>
         </div>
@@ -67,8 +67,8 @@ export function PinList({ pins, onDeletePin }: PinListProps) {
             <div className="w-16 h-16 bg-gradient-to-r from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Globe className="h-8 w-8 text-green-400" />
             </div>
-            <p className="text-green-700 text-lg font-medium mb-2">No pins yet</p>
-            <p className="text-green-600 text-sm">Start exploring by clicking on the map</p>
+            <p className="text-green-700 text-lg font-medium mb-2">Все още нямате добавени пинчета</p>
+            <p className="text-green-600 text-sm">Започнете да преглеждате на карта чрез кликване</p>
           </div>
         ) : (
           <div className="space-y-4 max-h-96 overflow-y-auto custom-scrollbar">

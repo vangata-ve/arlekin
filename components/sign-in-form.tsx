@@ -51,35 +51,35 @@ export function SignInForm({ onSignIn }: SignInFormProps) {
             <MapPin className="h-8 w-8 text-blue-600" />
           </div>
         </div>
-        <CardTitle className="text-2xl font-bold">Welcome to WorldPins</CardTitle>
-        <CardDescription>Sign in to start pinning your favorite places around the world</CardDescription>
+        <CardTitle className="text-2xl font-bold">Добре дошли в Арлекин жива карта!</CardTitle>
+        <CardDescription>Влезте в своя акаунт, за да започнете да добавяте вашите видеа и снимки</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Full Name</Label>
+            <Label htmlFor="name">Пълно име</Label>
             <Input
               id="name"
               type="text"
-              placeholder="Enter your full name"
+              placeholder="Въведете пълнот си име"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">Имейл</Label>
             <Input
               id="email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Въведете своя имейл"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
           <Button type="submit" className="w-full" disabled={isLoading || !email || !name}>
-            {isLoading ? "Signing in..." : "Sign In"}
+            {isLoading ? "Влизане в акаунта..." : "Влез"}
           </Button>
         </form>
       </CardContent>
